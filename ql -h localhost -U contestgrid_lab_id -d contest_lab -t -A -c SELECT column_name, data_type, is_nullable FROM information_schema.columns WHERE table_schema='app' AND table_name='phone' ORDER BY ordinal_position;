@@ -1,0 +1,10 @@
+phone_id|bigint|NO|nextval('app.phone_phone_id_seq'::regclass)
+person_id|bigint|YES|
+number|character varying|NO|
+extension|character varying|YES|
+phone_type|integer|YES|
+carrier|integer|YES|
+public|boolean|YES|false
+notes|text|YES|
+created_at|timestamp with time zone|YES|now()
+updated_at|timestamp with time zone|YES|now()

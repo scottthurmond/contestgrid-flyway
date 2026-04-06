@@ -1,0 +1,15 @@
+# Copy to flyway-remote.conf and fill values for your remote PostgreSQL server
+# Do NOT commit flyway-remote.conf with real credentials
+
+flyway.url=jdbc:postgresql://YOUR_DB_HOST:5432/contestdb?sslmode=require
+flyway.user=postgres
+flyway.password=CHANGE_ME
+flyway.schemas=public
+flyway.locations=filesystem:./db/migrations
+flyway.encoding=UTF-8
+flyway.validateOnMigrate=true
+flyway.cleanDisabled=true
+flyway.outOfOrder=false
+
+# Optional: set these if your DB provider requires stricter TLS verification
+# flyway.url=jdbc:postgresql://YOUR_DB_HOST:5432/contestdb?sslmode=verify-full&sslrootcert=/absolute/path/to/ca.pem

@@ -1,0 +1,20 @@
+# Example local Flyway config (copy to flyway-local.conf and fill in)
+# Usage (from flyway/):
+#   cp conf/flyway-local.conf.example conf/flyway-local.conf
+#   export FLYWAY_PASSWORD='...'
+#   flyway -configFiles=conf/flyway-local.conf info
+#   flyway -configFiles=conf/flyway-local.conf migrate
+
+flyway.url=jdbc:postgresql://localhost:5432/contest_lab
+flyway.user=contestgrid
+flyway.password=${FLYWAY_PASSWORD}
+
+flyway.schemas=public
+flyway.locations=filesystem:./db/migrations
+
+flyway.baselineOnMigrate=true
+flyway.baselineVersion=0
+flyway.encoding=UTF-8
+flyway.validateOnMigrate=true
+flyway.cleanDisabled=true
+flyway.outOfOrder=false

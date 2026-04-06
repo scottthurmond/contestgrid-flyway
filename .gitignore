@@ -1,0 +1,5 @@
+# Local developer overrides / real credentials
+conf/flyway-local.conf
+conf/flyway-remote.conf
+conf/*.local.conf
+conf/*.remote.conf
